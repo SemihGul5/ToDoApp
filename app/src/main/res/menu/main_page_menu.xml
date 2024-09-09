@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/search"
+        android:title="Search"
+        android:icon="@drawable/baseline_search_24"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        app:showAsAction="always|collapseActionView"
+        />
+    <item
+        android:id="@+id/priorityHigh"
+        android:title="Artan Öncelik" />
+    <item
+        android:id="@+id/priorityLow"
+        android:title="Azalan Öncelik" />
+    <item
+        android:id="@+id/dateOrderAsc"
+        android:title="Artan Tarih" />
+    <item
+        android:id="@+id/dateOrderDesc"
+        android:title="Azalan Tarih" />
+</menu>

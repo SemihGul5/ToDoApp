@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/mainPageFragment">
+
+    <fragment
+        android:id="@+id/mainPageFragment"
+        android:name="com.abrebo.todoapp.ui.fragment.MainPageFragment"
+        android:label="fragment_main_page"
+        tools:layout="@layout/fragment_main_page" >
+        <action
+            android:id="@+id/action_mainPageFragment_to_addToDoFragment"
+            app:destination="@id/addToDoFragment" />
+        <action
+            android:id="@+id/action_mainPageFragment_to_detailToDoFragment"
+            app:destination="@id/detailToDoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addToDoFragment"
+        android:name="com.abrebo.todoapp.ui.fragment.AddToDoFragment"
+        android:label="fragment_detail_to_do"
+        tools:layout="@layout/fragment_detail_to_do" >
+        <action
+            android:id="@+id/action_addToDoFragment_to_mainPageFragment"
+            app:destination="@id/mainPageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailToDoFragment"
+        android:name="com.abrebo.todoapp.ui.fragment.DetailToDoFragment"
+        android:label="DetailToDoFragment"
+        tools:layout="@layout/fragment_detail_to_do">
+        <action
+            android:id="@+id/action_detailToDoFragment_to_mainPageFragment"
+            app:destination="@id/mainPageFragment" />
+        <argument
+            android:name="todo"
+            app:argType="com.abrebo.todoapp.data.model.ToDo" />
+    </fragment>
+</navigation>
